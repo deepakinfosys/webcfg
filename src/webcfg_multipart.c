@@ -794,8 +794,8 @@ WEBCFG_STATUS processMsgpackSubdoc(char *transaction_id)
 					}
                                 }
 				WebcfgInfo("Request:> param[%d].name = %s, type = %d\n",i,reqParam[i].name,reqParam[i].type);
-				WebcfgDebug("Request:> param[%d].value = %s\n",i,reqParam[i].value);
-				WebcfgDebug("Request:> param[%d].type = %d\n",i,reqParam[i].type);
+				WebcfgInfo("Request:> param[%d].value = %s\n",i,reqParam[i].value);
+				WebcfgInfo("Request:> param[%d].type = %d\n",i,reqParam[i].type);
 			}
 
 			if(reqParam !=NULL && validate_request_param(reqParam, paramCount) == WEBCFG_SUCCESS)
