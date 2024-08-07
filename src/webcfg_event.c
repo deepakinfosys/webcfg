@@ -286,7 +286,7 @@ void* processSubdocEvents()
 			pthread_mutex_unlock (&event_mut);
 			WebcfgDebug("mutex unlock in event consumer thread\n");
 
-			WebcfgDebug("Data->data is %s\n", Data->data);
+			WebcfgInfo("Data->data is %s\n", Data->data);
 			rv = parseEventData(Data->data, &eventParam);
 			if(rv == WEBCFG_SUCCESS)
 			{
@@ -1048,7 +1048,7 @@ WEBCFG_STATUS retryMultipartSubdoc(webconfig_tmp_data_t *docNode, char *docName)
 						}
 			                }
 					WebcfgInfo("Request:> param[%d].name = %s, type = %d\n",i,reqParam[i].name,reqParam[i].type);
-					WebcfgDebug("Request:> param[%d].value = %s\n",i,reqParam[i].value);
+					WebcfgInfo("Request:> param[%d].value = %s\n",i,reqParam[i].value);
 				}
 
 				if(reqParam !=NULL && validate_request_param(reqParam, paramCount) == WEBCFG_SUCCESS)

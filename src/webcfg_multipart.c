@@ -2494,7 +2494,7 @@ WEBCFG_STATUS validate_request_param(param_t *reqParam, int paramCount)
 {
 	int i = 0;
 	WEBCFG_STATUS ret = WEBCFG_SUCCESS;
-	WebcfgDebug("------------ validate_request_param ----------\n");
+	WebcfgInfo("------------ validate_request_param ----------\n");
 	for (i = 0; i < paramCount; i++)
 	{
 		WebcfgDebug("reqParam[%d].name: %s\n",i,reqParam[i].name);
